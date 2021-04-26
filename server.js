@@ -1,12 +1,13 @@
 const server = require("http").createServer();
 const io = require("socket.io")(server, {
   cors: {
-    	origin: "http://localhost",
+    	origin: "https://jogo-mult.herokuapp.com/",
 	    methods: ["GET", "POST"],
 	    allowedHeaders: ["my-custom-header"],
 	    credentials: true
   },
 });
+
 server.listen(process.env.PORT || 8080);
 console.log('Servidor rodando na porta 8080...');
 		var ranked = require('ranked');
