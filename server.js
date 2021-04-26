@@ -110,7 +110,6 @@ io.on('connection', function(socket){
 		console.log(peca);
 		io.sockets.emit('getPeca', peca);
 	});
-
 	const scoreFn = jogador => jogador.pontos;
 
 	function atualizarJogadores() {
