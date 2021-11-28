@@ -8,40 +8,14 @@ const io = require("socket.io")(server, {
   },
 });
 
-
 server.listen(process.env.PORT || 8080);
 console.log('Servidor rodando na porta 8080...');
-		var ranked = require('ranked');
 
-// var ranked = require('ranked');
-// const languages = [
-//   { name: 'Javascript', year: 1995 },
-//   { name: 'Java', year: 1995 },
-//   { name: 'C#', year: 2001 },
-//   { name: 'Groovy', year: 2003 },
-//   { name: 'Scala', year: 2003 },
-//   { name: 'Go', year: 2009 },
-// ];
-// const jogadores = [
-// {
-// 	Vinicius: {'pontos': 2},
-// 	Ana: {'pontos': 10},
-// 		Vivi: {'pontos': 30}
-// 	}
-// ]
-
-// console.log(jogadores);
-// const scoreFn = jogador => jogador.pontos;
-// var rankedItems = ranked.ranking(jogadores, scoreFn);
-// console.log(rankedItems);
-
-
-
-
+var ranked = require('ranked');
 var peca = null;
 
 async function criarPeca(){
-	var px = Math.floor(Math.random() * 9) * 50;
+    var px = Math.floor(Math.random() * 9) * 50;
     var py = Math.floor(Math.random() * 9) * 50;
     peca = {px,py};
 }
